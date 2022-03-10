@@ -1,0 +1,18 @@
+{
+  "name": "lupita_tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw:build": "tailwind -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
