@@ -13,6 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/tailwind.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="font-nunito">
@@ -23,7 +24,9 @@
         <div class="flex flex-row justify-between">
           <a href="./home.html">
             <img class="logo" src="./Img/logo.png" alt="logo G-ONE" width="80" /></a>
-          <button id="btn_menu">Menu</button>
+          <button id="btn_menu" class="md:hidden"><span class="material-icons text-white px-4 py-6 h-full">
+              menu
+            </span></button>
         </div>
         <ul class="hidden flex-row pr-20  md:flex" id="menu-normal">
           <li><a href="./home.html" class="header_link_active">Inicio</a>
@@ -50,7 +53,8 @@
   <main>
     <!-- VIDEO -->
     <div>
-      <div class="absoluto">
+      <div
+        class="absolute bg-transparent text-white z-40 p-12 font-extrabold text-4xl sm:text-6xl md:text-6xl lg:text-8xl md:p-20 lg:p-32">
         <p>
           G-One <br />
           Auto Parts de México S.A. de C.V.
@@ -58,30 +62,34 @@
         <p></p>
       </div>
 
-      <video class="video" src="./Img/INSTITUCIONAL G-ONE_home2.mp4" preload="auto" muted autoplay loop></video>
+      <video class="w-full z-0 brightness-50" src="./Img/INSTITUCIONAL G-ONE_home2.mp4" preload="auto" muted autoplay
+        loop></video>
     </div>
     <!-- FIN VIDEO -->
 
     <!-- SECCION 3 -->
-    <div class="seccion-3">
-      <div>
-        <h4>NOSOTROS</h4>
-        <p>
+    <div class="flex flex-col py-20 bg-azul_claro space-y-8 px-12 md:flex-row md:space-y-0 md:space-x-8">
+      <div
+        class="bg-white  w-full md:w-1/3 p-6 rounded-lg shadow-md transition transform hover:shadow-xl hover:-translate-y-3">
+        <h4 class="text-2xl font-bold mb-3">NOSOTROS</h4>
+        <p class="text-justify">
           G-ONE es una empresa joven que se estableció en el estado de
           Guanajuato, México en el año 2012.
         </p>
       </div>
-      <div>
-        <h4>NUESTROS PRODUCTOS</h4>
-        <p>
+      <div class="bg-white w-full md:w-1/3
+       p-6 rounded-lg shadow-md transition transform hover:shadow-xl hover:-translate-y-3">
+        <h4 class="text-2xl font-bold mb-3">NUESTROS PRODUCTOS</h4>
+        <p class="text-justify">
           Nuestros productos son de la más alta calidad respaldados por años
           de experiencia, nuestras alianzas y clientes satisfechos a lo largo
           de nuestra historia.
         </p>
       </div>
-      <div>
-        <h4>POLITÍCA DE CALIDAD</h4>
-        <p>
+      <div
+        class="bg-white  w-full md:w-1/3 p-6 rounded-lg shadow-md transition transform hover:shadow-xl hover:-translate-y-3">
+        <h4 class="text-2xl font-bold mb-3">POLITÍCA DE CALIDAD</h4>
+        <p class="text-justify">
           Ofrecer la confianza y satisfacción al cliente por medio de la
           calidad suprema en la base administrativa.
         </p>
@@ -90,7 +98,7 @@
     <!-- FIN SECCION 3 -->
 
     <!-- ORIGEN -->
-    <div class="origen">
+    <div class=" bg-verde_fuerte">
       <h3>ORIGEN</h3>
       <p>
         G-One Auto Parts de México S.A. de C.V., es la unión (Joint Venture)
