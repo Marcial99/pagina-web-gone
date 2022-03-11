@@ -1,119 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>G-ONE</title>
-    <link rel="stylesheet" href="./css/home.css" />
-  </head>
-  <body>
-    <header class="header">
-      <a href="./home.html">
-        <img class="logo" src="./Img/logo.png" alt="logo G-ONE" width="80"
-      /></a>
-      <nav>
-        <ul>
-          <li><a href="./home.html">Inicio</a></li>
-          <li><a href="./nosotros.html">Nosotros</a></li>
-          <li><a href="./productos.html">Productos y Tecnologías</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li><a href="#">More</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G-ONE</title>
+  <link rel="stylesheet" href="./css/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
+</head>
+
+<body class="font-nunito">
+  <header>
+
+    <nav>
+      <div class="flex flex-col md:flex-row justify-between bg-azul_gone h-20">
+        <div class="flex flex-row justify-between">
+          <a href="./home.html">
+            <img class="logo" src="./Img/logo.png" alt="logo G-ONE" width="80" /></a>
+          <button id="btn_menu">Menu</button>
+        </div>
+        <ul class="hidden flex-row pr-20  md:flex" id="menu-normal">
+          <li><a href="./home.html" class="header_link_active">Inicio</a>
+          </li>
+          <li><a href="./nosotros.html" class="header_link">Nosotros</a></li>
+          <li><a href="./productos.html" class="header_link">Productos y
+              Tecnologías</a></li>
+          <li><a href="./contacto.html" class="header_link">Contacto</a></li>
+          <li><a href="#" class="header_link">More</a></li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <!-- VIDEO -->
-      <div>
-        <div class="absoluto">
-          <p>
-            G-One <br />
-            Auto Parts de México S.A. de C.V.
-          </p>
-          <p></p>
-        </div>
 
-        <video
-          class="video"
-          src="./Img/INSTITUCIONAL G-ONE_home2.mp4"
-          preload="auto"
-          muted
-          autoplay
-          loop
-        ></video>
-      </div>
-      <!-- FIN VIDEO -->
-
-      <!-- SECCION 3 -->
-      <div class="seccion-3">
-        <div>
-          <h4>NOSOTROS</h4>
-          <p>
-            G-ONE es una empresa joven que se estableció en el estado de
-            Guanajuato, México en el año 2012.
-          </p>
-        </div>
-        <div>
-          <h4>NUESTROS PRODUCTOS</h4>
-          <p>
-            Nuestros productos son de la más alta calidad respaldados por años
-            de experiencia, nuestras alianzas y clientes satisfechos a lo largo
-            de nuestra historia.
-          </p>
-        </div>
-        <div>
-          <h4>POLITÍCA DE CALIDAD</h4>
-          <p>
-            Ofrecer la confianza y satisfacción al cliente por medio de la
-            calidad suprema en la base administrativa.
-          </p>
+        <div id="menu_peque" class="hidden flex-col bg-azul_gone z-50">
+          <ul class="flex flex-col w-full text-white">
+            <li><a href="./home.html" class="block py-3 px-4">Inicio</a></li>
+            <li><a href="./nosotros.html" class="block py-3 px-4">Nosotros</a></li>
+            <li><a href="./productos.html" class="block py-3 px-4">Productos y Tecnologías</a></li>
+            <li><a href="./contacto.html" class="block py-3 px-4">Contacto</a></li>
+            <li><a href="#" class="block py-3 px-4">More</a></li>
+          </ul>
         </div>
       </div>
-      <!-- FIN SECCION 3 -->
-
-      <!-- ORIGEN -->
-      <div class="origen">
-        <h3>ORIGEN</h3>
+    </nav>
+  </header>
+  <main>
+    <!-- VIDEO -->
+    <div>
+      <div class="absoluto">
         <p>
-          G-One Auto Parts de México S.A. de C.V., es la unión (Joint Venture)
-          de dos empresas lideres mundiales en la fabricación de partes para
-          automóviles.
+          G-One <br />
+          Auto Parts de México S.A. de C.V.
         </p>
-        <figure>
-          <img src="./Img/origen.png" alt="diagrama" />
-        </figure>
+        <p></p>
       </div>
-      <!-- FIN ORIGEN -->
-      <!-- CARRUSEL -->
-      <div class="carrusel">
-        <img src="./Img/img_home/DSC_0012.JPG" alt="varias_fotos" />
-      </div>
-      <!-- FIN CARRUSEL -->
 
-      <!-- MENSAJE PRESIDENTE -->
-      <div class="mensaje">
-        <div>
-          <h3>G-One: Empresa en crecimiento continuo</h3>
-          <p>
-            G-ONE se estableció en el año de 2012, es una empresa joven que
-            inició las operaciones en el año de 2014. Como fabricante
-            especializado en partes de la estructura de la carrocería, nuestro
-            propósito es fabricar un CUERPO ligero y altamente rígido en
-            cooperación con las matrices en Japón. Anticipando las necesidades
-            del cliente, realizamos actividades de producción diarias bajo el
-            lema de "Alta calidad, precio razonable y oportuno". En piso de
-            producción, nuestro objetivo es crear un ambiente de trabajo donde
-            las personas puedan trabajar rítmicamente, introduciendo equipos de
-            racionalización del ahorro laboral y encarnando una línea armoniosa
-            entre las personas y los equipos. Nosotros seguiremos creciendo bajo
-            el lema de "divertido y ocupado".
-          </p>
-        </div>
-        <figure>
-          <img src="./Img/avatar.png" alt="presidente" />
-        </figure>
+      <video class="video" src="./Img/INSTITUCIONAL G-ONE_home2.mp4" preload="auto" muted autoplay loop></video>
+    </div>
+    <!-- FIN VIDEO -->
+
+    <!-- SECCION 3 -->
+    <div class="seccion-3">
+      <div>
+        <h4>NOSOTROS</h4>
+        <p>
+          G-ONE es una empresa joven que se estableció en el estado de
+          Guanajuato, México en el año 2012.
+        </p>
       </div>
-      <!-- FIN MENSAJE PRESIDENTE -->
-    </main>
-  </body>
+      <div>
+        <h4>NUESTROS PRODUCTOS</h4>
+        <p>
+          Nuestros productos son de la más alta calidad respaldados por años
+          de experiencia, nuestras alianzas y clientes satisfechos a lo largo
+          de nuestra historia.
+        </p>
+      </div>
+      <div>
+        <h4>POLITÍCA DE CALIDAD</h4>
+        <p>
+          Ofrecer la confianza y satisfacción al cliente por medio de la
+          calidad suprema en la base administrativa.
+        </p>
+      </div>
+    </div>
+    <!-- FIN SECCION 3 -->
+
+    <!-- ORIGEN -->
+    <div class="origen">
+      <h3>ORIGEN</h3>
+      <p>
+        G-One Auto Parts de México S.A. de C.V., es la unión (Joint Venture)
+        de dos empresas lideres mundiales en la fabricación de partes para
+        automóviles.
+      </p>
+      <figure>
+        <img src="./Img/origen.png" alt="diagrama" />
+      </figure>
+    </div>
+    <!-- FIN ORIGEN -->
+    <!-- CARRUSEL -->
+    <div class="carrusel">
+      <img src="./Img/img_home/DSC_0012.JPG" alt="varias_fotos" />
+    </div>
+    <!-- FIN CARRUSEL -->
+
+    <!-- MENSAJE PRESIDENTE -->
+    <div class="mensaje">
+      <div>
+        <h3>G-One: Empresa en crecimiento continuo</h3>
+        <p>
+          G-ONE se estableció en el año de 2012, es una empresa joven que
+          inició las operaciones en el año de 2014. Como fabricante
+          especializado en partes de la estructura de la carrocería, nuestro
+          propósito es fabricar un CUERPO ligero y altamente rígido en
+          cooperación con las matrices en Japón. Anticipando las necesidades
+          del cliente, realizamos actividades de producción diarias bajo el
+          lema de "Alta calidad, precio razonable y oportuno". En piso de
+          producción, nuestro objetivo es crear un ambiente de trabajo donde
+          las personas puedan trabajar rítmicamente, introduciendo equipos de
+          racionalización del ahorro laboral y encarnando una línea armoniosa
+          entre las personas y los equipos. Nosotros seguiremos creciendo bajo
+          el lema de "divertido y ocupado".
+        </p>
+      </div>
+      <figure>
+        <img src="./Img/avatar.png" alt="presidente" />
+      </figure>
+    </div>
+    <!-- FIN MENSAJE PRESIDENTE -->
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      var oculto = true;
+      $('#btn_menu').click(function () {
+        if (oculto) {
+          $('#menu_peque').removeClass('hidden');
+          $('#menu_peque').addClass('flex');
+        } else {
+          $('#menu_peque').removeClass('flex');
+          $('#menu_peque').addClass('hidden');
+        }
+        oculto = !oculto;
+
+
+      });
+    });
+  </script>
+</body>
+
 </html>

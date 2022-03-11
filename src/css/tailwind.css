@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header_link_active {
+  @apply block h-full px-6 py-6 text-white hover:bg-slate-500 bg-slate-500  font-extrabold transition transform hover:scale-105;
+}
+
+.header_link {
+  @apply block h-full px-6 py-6 text-white hover:bg-slate-500 transition transform hover:scale-105;
+}
