@@ -8,7 +8,7 @@ module.exports = {
         verde_fuerte: "#1B3022",
       },
       fontFamily: {
-        nunito: "Nunito",
+        poppins: "Poppins",
       },
     },
   },

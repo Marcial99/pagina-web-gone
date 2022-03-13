@@ -468,6 +468,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -482,6 +486,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-0 {
   z-index: 0;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mb-3 {
@@ -500,16 +522,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-20 {
-  height: 5rem;
+.h-24 {
+  height: 6rem;
 }
 
 .h-full {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .transform {
@@ -542,9 +576,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
-.bg-azul_gone {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(12 77 156 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -556,22 +590,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(177 221 241 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-verde_fuerte {
   --tw-bg-opacity: 1;
   background-color: rgb(27 48 34 / var(--tw-bg-opacity));
 }
 
-.p-12 {
-  padding: 3rem;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-20 {
+  padding: 5rem;
 }
 
 .px-4 {
@@ -599,16 +633,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 3rem;
 }
 
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
 .pr-20 {
   padding-right: 5rem;
 }
 
 .text-justify {
   text-align: justify;
-}
-
-.font-nunito {
-  font-family: Nunito;
 }
 
 .text-4xl {
@@ -629,6 +669,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.text-azul_gone {
+  --tw-text-opacity: 1;
+  color: rgb(12 77 156 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -645,6 +695,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.backdrop-brightness-50 {
+  --tw-backdrop-brightness: brightness(.5);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .transition {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -653,35 +709,86 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-.header_link_active {
+.header_link_active_blanco {
   display: block;
   height: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  border-bottom-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(12 77 156 / var(--tw-border-opacity));
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(12 77 156 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.header_link_active_blanco:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.header_link_blanco {
+  display: block;
+  height: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.header_link_blanco:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-weight: 800;
+}
+
+.header_link_active_transparente {
+  display: block;
+  height: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-bottom-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 800;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
-.header_link_active:hover {
+.header_link_active_transparente:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 
-.header_link {
+.header_link_transparente {
   display: block;
   height: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -689,6 +796,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -698,12 +807,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-.header_link:hover {
+.header_link_transparente:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-weight: 800;
+}
+
+.header_transparente {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  height: 5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .header_transparente {
+    flex-direction: row;
+  }
+}
+
+.header_blanco {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  height: 5rem;
+  flex-direction: column;
+  justify-content: space-between;
   --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .header_blanco {
+    flex-direction: row;
+  }
 }
 
 .hover\:-translate-y-3:hover {
@@ -757,6 +898,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding: 5rem;
   }
 
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .md\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .md\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -766,6 +922,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 1024px) {
   .lg\:p-32 {
     padding: 8rem;
+  }
+
+  .lg\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .lg\:py-44 {
+    padding-top: 11rem;
+    padding-bottom: 11rem;
   }
 
   .lg\:text-8xl {

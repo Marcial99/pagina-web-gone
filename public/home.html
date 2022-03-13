@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/tailwind.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,50 +20,54 @@
   <header>
 
     <nav>
-      <div class="flex flex-col md:flex-row justify-between bg-azul_gone h-20">
-        <div class="flex flex-row justify-between">
-          <a href="./home.html">
-            <img class="logo" src="./Img/logo.png" alt="logo G-ONE" width="80" /></a>
-          <button id="btn_menu" class="md:hidden"><span class="material-icons text-white px-4 py-6 h-full">
-              menu
-            </span></button>
-        </div>
-        <ul class="hidden flex-row pr-20  md:flex" id="menu-normal">
-          <li><a href="./home.html" class="header_link_active">Inicio</a>
-          </li>
-          <li><a href="./nosotros.html" class="header_link">Nosotros</a></li>
-          <li><a href="./productos.html" class="header_link">Productos y
-              Tecnologías</a></li>
-          <li><a href="./contacto.html" class="header_link">Contacto</a></li>
-          <li><a href="#" class="header_link">More</a></li>
-        </ul>
-
-        <div id="menu_peque" class="hidden flex-col bg-azul_gone z-50">
-          <ul class="flex flex-col w-full text-white">
-            <li><a href="./home.html" class="block py-3 px-4">Inicio</a></li>
-            <li><a href="./nosotros.html" class="block py-3 px-4">Nosotros</a></li>
-            <li><a href="./productos.html" class="block py-3 px-4">Productos y Tecnologías</a></li>
-            <li><a href="./contacto.html" class="block py-3 px-4">Contacto</a></li>
-            <li><a href="#" class="block py-3 px-4">More</a></li>
+      <div class="h-24 fixed w-full z-50">
+        <div id="header" class="header_transparente">
+          <div class="flex flex-row justify-between">
+            <a href="./home.html">
+              <img class="ml-10 mt-3" src="./Img/logo.png" alt="logo G-ONE" width="80" /></a>
+            <button id="btn_menu" class="md:hidden"><span class="material-icons text-azul_gone  px-4 py-6 h-full">
+                menu
+              </span></button>
+          </div>
+          <ul class="hidden flex-row pr-20  md:flex" id="menu-normal">
+            <li><a href="./home.html" class="header_link_active_transparente" id="inicio">Inicio</a>
+            </li>
+            <li><a href="./nosotros.html" class="header_link_transparente" id="nosotros">Nosotros</a></li>
+            <li><a href="./productos.html" class="header_link_transparente" id="productos">Productos y
+                Tecnologías</a></li>
+            <li><a href="./contacto.html" class="header_link_transparente" id="contactos">Contacto</a></li>
+            <li><a href="#" class="header_link_transparente" id="mas">More</a></li>
           </ul>
+
+          <div id="menu_peque" class="hidden flex-col bg-white z-50 md:hidden">
+            <ul class="flex flex-col w-full text-black">
+              <li><a href="./home.html" class="block py-3 px-4 font-extrabold text-azul_gone">Inicio</a></li>
+              <li><a href="./nosotros.html" class="block py-3 px-4">Nosotros</a></li>
+              <li><a href="./productos.html" class="block py-3 px-4">Productos y Tecnologías</a></li>
+              <li><a href="./contacto.html" class="block py-3 px-4">Contacto</a></li>
+              <li><a href="#" class="block py-3 px-4">More</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   </header>
   <main>
     <!-- VIDEO -->
-    <div>
+    <div id="video" class="h-screen">
       <div
-        class="absolute bg-transparent text-white z-40 p-12 font-extrabold text-4xl sm:text-6xl md:text-6xl lg:text-8xl md:p-20 lg:p-32">
-        <p>
-          G-One <br />
-          Auto Parts de México S.A. de C.V.
-        </p>
+        class="absolute bg-transparent text-white z-40 px-20 py-40 font-extrabold text-4xl sm:text-6xl md:text-6xl lg:text-8xl md:px-20 md:py-32 lg:px-32 lg:py-44">
+        <div>
+          <p>
+            G-One <br />
+            Auto Parts de México S.A. de C.V.
+          </p>
+        </div>
         <p></p>
       </div>
 
-      <video class="w-full z-0 brightness-50" src="./Img/INSTITUCIONAL G-ONE_home2.mp4" preload="auto" muted autoplay
-        loop></video>
+      <video class="h-full w-full z-0 brightness-50 object-cover" src="./Img/INSTITUCIONAL G-ONE_home2.mp4"
+        preload="auto" muted autoplay loop></video>
     </div>
     <!-- FIN VIDEO -->
 
@@ -155,7 +159,41 @@
           $('#menu_peque').addClass('hidden');
         }
         oculto = !oculto;
+      });
 
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        var heigth = $('#video').height();
+        console.log(heigth);
+        //>=, not <=
+        if (scroll >= heigth) {
+          //clearHeader, not clearheader - caps H
+          $('#header').removeClass('header_transparente');
+          $('#header').addClass('header_blanco');
+          $('#inicio').removeClass('header_link_active_transparente');
+          $('#inicio').addClass('header_link_active_blanco');
+          $('#nosotros').removeClass('header_link_transparente');
+          $('#nosotros').addClass('header_link_blanco');
+          $('#productos').removeClass('header_link_transparente');
+          $('#productos').addClass('header_link_blanco');
+          $('#contactos').removeClass('header_link_transparente');
+          $('#contactos').addClass('header_link_blanco');
+          $('#mas').removeClass('header_link_transparente');
+          $('#mas').addClass('header_link_blanco');
+        } else {
+          $('#header').removeClass('header_blanco');
+          $('#header').addClass('header_transparente');
+          $('#inicio').removeClass('header_link_active_blanco');
+          $('#inicio').addClass('header_link_active_transparente');
+          $('#nosotros').removeClass('header_link_blanco');
+          $('#nosotros').addClass('header_link_transparente');
+          $('#productos').removeClass('header_link_blanco');
+          $('#productos').addClass('header_link_transparente');
+          $('#contactos').removeClass('header_link_blanco');
+          $('#contactos').addClass('header_link_transparente');
+          $('#mas').removeClass('header_link_blanco');
+          $('#mas').addClass('header_link_transparente');
+        }
 
       });
     });

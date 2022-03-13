@@ -2,10 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.header_link_active {
-  @apply block h-full px-6 py-6 text-white hover:bg-slate-500 bg-slate-500  font-extrabold transition transform hover:scale-105;
+.header_link_active_blanco {
+  @apply block h-full px-6 py-6  text-lg text-azul_gone  font-extrabold border-b-4 border-azul_gone transition transform  hover:scale-105;
 }
 
-.header_link {
-  @apply block h-full px-6 py-6 text-white hover:bg-slate-500 transition transform hover:scale-105;
+.header_link_blanco {
+  @apply block h-full px-6 py-6 text-lg text-black   transition transform hover:scale-105 hover:font-extrabold;
+}
+
+.header_link_active_transparente {
+  @apply block h-full px-6 py-6  text-lg text-white  font-extrabold border-b-4 border-white transform  hover:scale-105;
+}
+
+.header_link_transparente {
+  @apply block h-full px-6 py-6 text-lg text-white   transition transform hover:scale-105 hover:font-extrabold;
+}
+.header_transparente {
+  @apply flex flex-col md:flex-row justify-between bg-transparent h-20 my-auto;
+}
+.header_blanco {
+  @apply flex flex-col md:flex-row justify-between bg-white h-20 my-auto;
 }
